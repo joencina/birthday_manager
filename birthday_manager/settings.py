@@ -3,7 +3,7 @@ from os import path
 import environ
 
 
-ROOT = environ.Path(__file__).path('../' * 2)
+ROOT = environ.Path(__file__).path('../')
 ENV = environ.Env(DJANGO_DEBUG=(bool, False), )
 if path.isfile(ROOT('.env')):
     environ.Env.read_env(ROOT('.env'))
@@ -21,7 +21,10 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'bootstrap_datepicker_plus',
+    "bootstrap4",
     'users',
+    'birthday_manager.apps.BirthdayManagerConfig',
 ]
 
 AUTHENTICATION_BACKENDS = (

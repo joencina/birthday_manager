@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+    {% if contacts_list %}
+
+        <div class="col-md-8 m-auto">
+        <h5 class="display-3 text-center">Today's birthdays &#x1F973</h5>
+        {% for person in contacts_list %}
+
+
+                <div class="card m-3">
+                    <div class="card-body text-center pb-2">
+                            <p class="lead">{{ person.name }}</p>
+                    </div>
+                </div>
+
+        {% endfor %}
+        </div>
+    {% else %}
+        <div class="col-md-8 m-auto">
+            <h5 class="display-3 text-center">It is no one's birthday today &#x1F937</h5>
+        </div>
+    {% endif %}
+
+{% endblock %}
