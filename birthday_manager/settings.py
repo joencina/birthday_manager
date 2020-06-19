@@ -1,5 +1,5 @@
 from os import path
-
+import django_heroku
 import environ
 
 
@@ -100,3 +100,4 @@ ALLOWED_HOSTS = ['*']
 STATIC_ROOT = ROOT('staticfiles')
 STATICFILES_DIRS = ['static']
 STATIC_URL = '/static/'
+django_heroku.settings(locals())
