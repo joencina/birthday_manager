@@ -3,7 +3,7 @@ import environ
 
 
 ROOT = environ.Path(__file__).path('../'*2)
-ENV = environ.Env(DJANGO_DEBUG=(bool, False), )
+ENV = environ.Env(DJANGO_DEBUG=(bool, True), )
 if path.isfile(ROOT('.env')):
     environ.Env.read_env(ROOT('.env'))
 
