@@ -3,7 +3,7 @@ from os import path
 import environ
 
 
-ROOT = environ.Path(__file__).path('../')
+ROOT = environ.Path(__file__).path('../'*2)
 ENV = environ.Env(DJANGO_DEBUG=(bool, False), )
 if path.isfile(ROOT('.env')):
     environ.Env.read_env(ROOT('.env'))
@@ -87,7 +87,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'America/Los_Angeles'
+TIME_ZONE = 'America/Santiago'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
