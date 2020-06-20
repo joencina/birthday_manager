@@ -7,6 +7,8 @@ ENV = environ.Env(DJANGO_DEBUG=(bool, True), )
 if path.isfile(ROOT('.env')):
     environ.Env.read_env(ROOT('.env'))
 
+
+
 SITE_ROOT = ROOT()
 
 DEBUG = ENV('DJANGO_DEBUG')
@@ -99,3 +101,9 @@ ALLOWED_HOSTS = ['*']
 STATIC_ROOT = ROOT('staticfiles')
 STATICFILES_DIRS = ['static']
 STATIC_URL = '/static/'
+
+# USE_LOCKDOWN = ENV('USE_LOCKDOWN')
+# if USE_LOCKDOWN:
+#     INSTALLED_APPS += ('lockdown',)
+#     MIDDLEWARE += ('lockdown.middleware.LockdownMiddleware',)
+#     LOCKDOWN_PASSWORDS = ENV('LOCKDOWN_PASSWORDS').split(",")
