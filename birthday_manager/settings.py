@@ -101,9 +101,3 @@ ALLOWED_HOSTS = ['*']
 STATIC_ROOT = ROOT('staticfiles')
 STATICFILES_DIRS = ['static']
 STATIC_URL = '/static/'
-
-# USE_LOCKDOWN = ENV('USE_LOCKDOWN')
-# if USE_LOCKDOWN:
-#     INSTALLED_APPS += ('lockdown',)
-#     MIDDLEWARE += ('lockdown.middleware.LockdownMiddleware',)
-#     LOCKDOWN_PASSWORDS = ENV('LOCKDOWN_PASSWORDS').split(",")
