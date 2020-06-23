@@ -1,4 +1,4 @@
-[![codecov](https://codecov.io/gh/joencina/talkipa2me/branch/master/graph/badge.svg?token=J3LNSI2QN4)](https://codecov.io/gh/joencina/talkipa2me)
+[![codecov](https://codecov.io/gh/joencina/birthday_manager/branch/master/graph/badge.svg?token=SA86H36CCQ)](https://codecov.io/gh/joencina/birthday_manager)
 # Introduction
 
 ## Description
