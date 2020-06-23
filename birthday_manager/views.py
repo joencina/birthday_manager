@@ -26,8 +26,7 @@ class Contacts(generic.ListView):
 
 # ADD CONTACT
 # form
-# Maybe import CreateView // Rename it. PersonCreate
-class CreateView(generic.edit.CreateView):
+class PersonCreate(generic.edit.CreateView):
     model = Person
     template_name = 'add.html'
     fields = ['name', 'birthday']
