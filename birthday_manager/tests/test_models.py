@@ -5,17 +5,17 @@ from birthday_manager.models import Person
 
 
 class TestPersonCreate(TestCase):
-    def test_setup(self):
-        return Person.objects.create(name='Test Person', birthday=datetime(2020, 6, 22))
+    # Test if you can create an object and it works
+    def setUp(self) -> None:
+        self.person = Person.objects.create(name='Test Person', birthday=datetime(2020, 6, 22))
 
     def test_name(self):
-        person = self.test_setup()
-        self.assertEqual(person.name, 'Test Person')
+        self.assertEqual(self.person.name, 'Test Person')
 
     def test_birthday(self):
-        person = self.test_setup()
-        self.assertEqual(person.birthday, datetime(2020, 6, 22))
+        self.assertEqual(self.person.birthday, datetime(2020, 6, 22))
 
     def test_str(self):
-        person = self.test_setup()
-        self.assertEqual(str(person), "Test Person: 6/22")
+        self.assertEqual(str(self.person), "Test Person: 6/22")
+
+# TODO: Multiple assertions per test is fine
