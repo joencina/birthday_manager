@@ -55,7 +55,7 @@ class SearchView(generic.edit.CreateView):
     fields = ['name']
 
     def get_success_url(self):
-        return reverse('found', kwargs={'name': self.object.name})
+        return reverse('found', kwargs={'name': self.object.name}) # pragma
 
 
 # success page
